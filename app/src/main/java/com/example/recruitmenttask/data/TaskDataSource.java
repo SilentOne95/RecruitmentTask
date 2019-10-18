@@ -22,5 +22,5 @@ public interface TaskDataSource {
 
     void getAllAuthors(@NonNull final LoadDataCallback callback);
 
-    void getSingleAuthor(String name, @NonNull final GetSingleDataCallback callback);
+    void getSingleAuthor(String slug, @NonNull final GetSingleDataCallback callback);
 }

@@ -37,6 +37,10 @@ public class TaskRemoteDataSource implements TaskDataSource {
     }
 
     @Override
-    public void getSingleAuthor(String name, @NonNull GetSingleDataCallback callback) {
+    public void getSingleAuthor(String slug, @NonNull GetSingleDataCallback callback) {
+        mDisposable.add(mApi.getSingleAuthorDetail(slug)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(callback::onDataLoaded, throwable -> callback.onDataNotAvailable()));
     }
 }

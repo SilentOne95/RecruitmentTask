@@ -40,5 +40,4 @@ public class ListViewModel extends ViewModel {
             public void onDataNotAvailable() { }
         });
     }
-
 }

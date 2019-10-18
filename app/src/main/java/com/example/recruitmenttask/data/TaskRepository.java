@@ -45,8 +45,8 @@ public class TaskRepository implements TaskDataSource {
     }
 
     @Override
-    public void getSingleAuthor(String name, @NonNull final GetSingleDataCallback callback) {
-        mTaskRemoteDataSource.getSingleAuthor(name, new GetSingleDataCallback() {
+    public void getSingleAuthor(String slug, @NonNull final GetSingleDataCallback callback) {
+        mTaskRemoteDataSource.getSingleAuthor(slug, new GetSingleDataCallback() {
             @Override
             public void onDataLoaded(Object object) {
                 callback.onDataLoaded(object);

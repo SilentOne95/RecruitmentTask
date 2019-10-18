@@ -43,7 +43,7 @@ public class ListViewFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("List");
+        getActivity().setTitle(R.string.fragment_title_list);
 
         setUpAdapter();
         setUpViewModel();
