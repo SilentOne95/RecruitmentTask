@@ -11,6 +11,6 @@ import retrofit2.http.Streaming;
 public interface Api {
 
     @Streaming
-    @GET("/")
+    @GET("api/authors")
     Single<List<Author>> getAllAuthors();
 }

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,17 +19,22 @@ public class AuthorListAdapter extends RecyclerView.Adapter<AuthorListAdapter.Vi
 
     private final LayoutInflater mInflater;
     private List<Author> mAuthors;
-    private RecyclerViewClickListner mItemClickListner;
+    private RecyclerViewClickListener mItemClickListner;
 
-    public AuthorListAdapter(Context context, RecyclerViewClickListner listener) {
+    public AuthorListAdapter(Context context, RecyclerViewClickListener listener) {
         mInflater = LayoutInflater.from(context);
         mItemClickListner = listener;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
+        private final TextView nameTextView;
+        private final Button detailsButton;
+
         ViewHolder(View view) {
             super(view);
+            nameTextView = view.findViewById(R.id.list_item_name);
+            detailsButton = view.findViewById(R.id.list_item_button);
         }
     }
 
@@ -40,7 +47,9 @@ public class AuthorListAdapter extends RecyclerView.Adapter<AuthorListAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull AuthorListAdapter.ViewHolder holder, final int position) {
-        Author author = mAuthors.get(position);
+        Author currentAuthor = mAuthors.get(position);
+        holder.nameTextView.setText(currentAuthor.getName());
+        holder.detailsButton.setOnClickListener(view -> mItemClickListner.onItemClick(currentAuthor.getSlug()));
     }
 
     public void setAuthors(List<Author> authors) {
