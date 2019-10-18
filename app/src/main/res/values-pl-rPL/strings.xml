@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recruitment Task</string>
+
+    <string name="fragment_title_list">Lista</string>
+    <string name="fragment_title_details">Szczegóły</string>
+
+    <string name="button_details">Szczegóły</string>
+</resources>

@@ -37,7 +37,7 @@ public class DetailViewFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle(R.string.fragment_title_list);
+        getActivity().setTitle(R.string.fragment_title_details);
 
         if (getArguments() != null) {
             mSlug = DetailViewFragmentArgs.fromBundle(getArguments()).getSlug();
