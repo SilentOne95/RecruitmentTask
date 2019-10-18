@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General values -->
+    <dimen name="zero_value">0dp</dimen>
+    <dimen name="very_small_value">4dp</dimen>
+    <dimen name="small_value">8dp</dimen>
+    <dimen name="mid_value">16dp</dimen>
+    <dimen name="big_value">24dp</dimen>
+    <dimen name="very_big_value">32dp</dimen>
+
+    <dimen name="standard_text_size">16sp</dimen>
+
+    <!-- List item -->
+    <dimen name="item_spacing">12dp</dimen>
+    <dimen name="item_button_height">35dp</dimen>
+    <dimen name="item_button_width">60dp</dimen>
+    <dimen name="rounded_corner_radius">3dp</dimen>
+
+</resources>
